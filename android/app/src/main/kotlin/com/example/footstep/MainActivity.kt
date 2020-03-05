@@ -1,4 +1,4 @@
-package com.example.footstep
+package tech.fnplus.footsteps
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
