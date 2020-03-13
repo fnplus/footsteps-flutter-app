@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:footstep/Password.dart';
 import 'package:wave/wave.dart';
 import 'package:wave/config.dart';
+import 'SignUpPage.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key key}) : super(key: key);
@@ -11,14 +13,14 @@ class LoginPage extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Container(
-            height:650,
+            height:550,
             child:RotatedBox(
               quarterTurns: 2,
               child: WaveWidget(
                 config: CustomConfig(
                   gradients: [
-                    [Colors.deepPurple,Colors.deepPurple.shade200],
-                    [Colors.indigo.shade200,Colors.purple.shade200],
+                    [Colors.green.shade400,Colors.green.shade700],
+                    [Colors.green.shade200,Colors.lightGreen.shade100],
                   ],
                   durations: [19440,10800],
                   heightPercentages: [0.20,0.25],
@@ -37,118 +39,117 @@ class LoginPage extends StatelessWidget {
           ListView(
             children:<Widget>[
               Container(
-                height:400,
+                height:570,
                 child:Column(
                   mainAxisAlignment:MainAxisAlignment.center,
                   children:<Widget>[
-                    Text("Login",textAlign:TextAlign.center,style:TextStyle(
-                      color:Colors.white70,
+                    SizedBox(height:30),
+                    Text("Welcome Back!",textAlign:TextAlign.center,style:TextStyle(
+                      color:Colors.green.shade900,
                       fontWeight:FontWeight.bold,
                       fontSize:28.0,
                     )),
-                    Card(
-                      margin:EdgeInsets.only(left: 30,right:30,top:30),
-                      elevation: 11,
-                      shape: RoundedRectangleBorder(borderRadius:BorderRadius.all(Radius.circular(40))),
-                      child: TextField(
-                        decoration:InputDecoration(
-                          prefixIcon:Icon(Icons.person,color:Colors.black38),
-                          hintText: "Email",
-                          hintStyle: TextStyle(color:Colors.black38),
-                          filled: true,
-                          fillColor: Colors.white,
-                          border: OutlineInputBorder(
-                            borderSide:BorderSide.none,
-                            borderRadius:BorderRadius.all(Radius.circular(40.0)),
-                          ),
-                          contentPadding: EdgeInsets.symmetric(horizontal:20.0, vertical:16.0)
-                        ),
-                      ),
-                    ),
-                    Card(
-                      margin:EdgeInsets.only(left: 30,right:30,top:30),
-                      elevation: 11,
-                      shape: RoundedRectangleBorder(borderRadius:BorderRadius.all(Radius.circular(40))),
-                      child: TextField(
-                        obscureText: true,
-                        decoration:InputDecoration(
-                          prefixIcon:Icon(Icons.person,color:Colors.black38),
-                          hintText: "Password",
-                          hintStyle: TextStyle(color:Colors.black38),
-                          filled: true,
-                          fillColor: Colors.white,
-                          border: OutlineInputBorder(
-                            borderSide:BorderSide.none,
-                            borderRadius:BorderRadius.all(Radius.circular(40.0)),
-                          ),
-                          contentPadding: EdgeInsets.symmetric(horizontal:20.0, vertical:16.0)
-                        ),
-                      ),
-                    ),
+                    
+                    
                     Container(
                       width:double.infinity,
                       padding:EdgeInsets.all(30.0),
                       child:RaisedButton(
                         padding: EdgeInsets.symmetric(vertical:16.0),
-                        color: Colors.pink,
+                        color: Colors.red.shade900,
                         onPressed: (){},
                         elevation: 11,
                         shape: RoundedRectangleBorder(borderRadius:BorderRadius.all(Radius.circular(40.0))),
-                        child: Text("Login",style:TextStyle(
-                          color:Colors.white70
+                        child: Text("Login with Gmail",style:TextStyle(
+                          color:Colors.white
                         )),
                       ),
                     ),
-                    Text("Forgot your Password?",style:TextStyle(
-                      color:Colors.white70
-                    ))
+                    
+                    Container(
+                      width:double.infinity,
+                      padding:EdgeInsets.only(left:30.0,right:30.0,bottom:30.0),
+                      child:RaisedButton(
+                        padding: EdgeInsets.symmetric(vertical:16.0),
+                        color: Colors.blue.shade800,
+                        onPressed: (){},
+                        elevation: 11,
+                        shape: RoundedRectangleBorder(borderRadius:BorderRadius.all(Radius.circular(40.0))),
+                        child: Text("Login with Facebook",style:TextStyle(
+                          color:Colors.white
+                        )),
+                      ),
+                    ),
+                    SizedBox(height: 70.0),
+                    Text("or, connect with ",style:TextStyle(
+                      color:Colors.black,
+                    )),
+                    Container(
+                          margin: EdgeInsets.only(left:15,right:15,top:15),
+                          child: Form(
+                            child: Column(
+                              children:<Widget>[
+                                new TextFormField(
+                                  
+                                  decoration: new  InputDecoration(
+                                    hintText: 'Enter your email',
+                                    fillColor: Colors.green,
+                                    border:  new OutlineInputBorder(
+                                      borderRadius: new BorderRadius.circular(25.0),
+                                      borderSide: new BorderSide(),
+                                    ),
+                                  ),
+                                  keyboardType: TextInputType.emailAddress,
+                                    style: new TextStyle(
+                                      fontFamily: "Poppins",
+                                    ),
+                                ),
+                                SizedBox(height:5),
+                                FlatButton(
+                                  onPressed: (){
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context)=>Password()),
+                                    );
+                                  },
+                                  color: Colors.green.shade700,
+                                  shape: RoundedRectangleBorder(borderRadius:BorderRadius.all(Radius.circular(40.0))),
+                                  child: Text("Next",style:TextStyle(
+                                    color:Colors.white
+                                  )),
+                                ),
+                              ]
+                            ),
+                          ),
+                        ),
+                   
                   ],
                 ),
               ),
-              SizedBox(height:100,),
               Align(
                 alignment:Alignment.bottomCenter,
                 child:Column(
                   mainAxisAlignment:MainAxisAlignment.end,
                   children:<Widget>[
-                    Text("or, connect with"),
-                    SizedBox(height:20.0),
-                    Row(
-                      children:<Widget>[
-                        SizedBox(width:20.0,),
-                        Expanded(
-                          child:RaisedButton(
-                            child:Text("Google"),
-                            textColor:Colors.white,
-                            color:Colors.red.shade900,
-                            shape:RoundedRectangleBorder(
-                              borderRadius:BorderRadius.all(Radius.circular(40)),
-                            ),
-                            onPressed: (){},
-                          ),
-                        ),
-                        SizedBox(width:10.0,),
-                        Expanded(
-                          child:RaisedButton(
-                            child:Text("Github"),
-                            textColor:Colors.white,
-                            color:Colors.black87,
-                            shape:RoundedRectangleBorder(
-                              borderRadius:BorderRadius.all(Radius.circular(40)),
-                            ),
-                            onPressed: (){},
-                          ),
-                        ),
-                        SizedBox(width:20.0,),
-                      ],
-                    ),
-                    Row(
+                    
+                        
+                         Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
+                        
                         Text("Don't have an account?"),
-                        FlatButton(child: Text("Sign up"),textColor: Colors.indigo,onPressed: (){},)
+                        FlatButton(child: Text("Sign up"),textColor: Colors.indigo,onPressed: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context)=>SignUp()),
+                        );
+                      },)
                       ],
                     )
+                      
+                    
+                    
+                   
                   ],
                 ),
               ),
@@ -159,3 +160,4 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
+
