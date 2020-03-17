@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:footstep/ForgotPassword.dart';
 import 'package:wave/wave.dart';
 import 'package:wave/config.dart';
 
+import 'LoginPage.dart';
 
-class Password extends StatelessWidget {
-  const Password({Key key}) : super(key: key);
+
+class Signup_email extends StatelessWidget {
+  const Signup_email({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +96,7 @@ class Password extends StatelessWidget {
                                   onPressed: (){},
                                   color: Colors.green.shade700,
                                   shape: RoundedRectangleBorder(borderRadius:BorderRadius.all(Radius.circular(40.0))),
-                                  child: Text("Log In",style:TextStyle(
+                                  child: Text("Sign Up",style:TextStyle(
                                     color:Colors.white
                                   )),
                                 ),
@@ -106,9 +107,10 @@ class Password extends StatelessWidget {
                         FlatButton(onPressed: (){
                           Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context)=>ForgotPassword()),
+                          MaterialPageRoute(builder: (context)=>LoginPage()),
                         );
-                        }, child: Text("Forgot Password?",style: TextStyle(color:Colors.green),)),
+                          
+                        }, child: Text("Already have an account!",style: TextStyle(color:Colors.green),)),
                    
                   ],
           ),

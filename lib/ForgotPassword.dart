@@ -97,7 +97,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     color: Colors.green.shade900),
                 child: FlatButton(
                   child: Text(
-                    "Reset Pssword",
+                    "Reset Password",
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w700,
