@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:footstep/Password.dart';
+import 'home.dart';
+import 'package:footstep/utils/firebase_auth.dart';
 import 'package:wave/wave.dart';
 import 'package:wave/config.dart';
 import 'SignUpPage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: Stack(
         children: <Widget>[
@@ -28,7 +32,17 @@ class LoginPage extends StatelessWidget {
                       child:RaisedButton(
                         padding: EdgeInsets.symmetric(vertical:16.0),
                         color: Colors.red.shade900,
-                        onPressed: (){},
+                        onPressed: ()async{
+                          bool res = await AuthProvider().loginWithGoogle();
+                          if(!res)
+                          print("error logging in with google");
+                          else{
+                            Navigator.push(
+                           context,
+                           MaterialPageRoute(builder: (context)=>HomePage()),
+                          );
+                          }
+                        },
                         elevation: 11,
                         shape: RoundedRectangleBorder(borderRadius:BorderRadius.all(Radius.circular(12.0))),
                         child: Text("Login with Gmail",style:TextStyle(
@@ -109,6 +123,7 @@ class LoginPage extends StatelessWidget {
           ),
         ],
       ),
+      
     );
   }
 }
