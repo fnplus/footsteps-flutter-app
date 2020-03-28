@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1042822146411",
+    "firebase_url": "https://fnplus-rle-test.firebaseio.com",
+    "project_id": "fnplus-rle-test",
+    "storage_bucket": "fnplus-rle-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042822146411:android:3a0218f0e0a68fa249842e",
+        "android_client_info": {
+          "package_name": "tech.fnplus.footsteps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042822146411-28e4eectbvmn27tv12hm4ulg30hcdv10.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.fnplus.footsteps",
+            "certificate_hash": "e09c9cbf9b9b10fe7387a90a38ae6b39b75c087b"
+          }
+        },
+        {
+          "client_id": "1042822146411-nmkjamk33lbg8s865j6q216qp4m0dp8t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCutJ3utEoXkIZzYLJiX8vF3ngjbzmcQfU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042822146411-nmkjamk33lbg8s865j6q216qp4m0dp8t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
