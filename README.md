@@ -1,9 +1,6 @@
 # 👣 Footsteps Android App
 A search 🔎engine for community-made 🧑‍🤝‍🧑learning resources for the 21st-century learner.👨‍💻👩‍💻Learn by following the footsteps (resources) of experts or make your own, giving others the right advice/resources to learn.
 
-
-This is the companion native app for  [footsteps-app](https://github.com/fnplus/footsteps-app) .This cross-platform application is being developed for the Android and iOS platforms using the Flutter SDK by Google. 
-
 Find more information and documentation [here](https://fnplus.github.io/) .
 
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][license]
@@ -11,9 +8,9 @@ Find more information and documentation [here](https://fnplus.github.io/) .
 [license]:https://github.com/fnplus/footsteps-flutter-app/blob/master/LICENSE
 
 ## 🤷 About
-We envisioned the project to solve the problems faced by 21st-century learners. A modern learner finds a flood of resources from Google Search but doesn't always find the right resources since it's the app that wins. There are so many free resources available on the internet made by experts in their field and yet we pay for outdated courses promoted by big companies and universities.
+This is the companion native app for  [footsteps-app](https://github.com/fnplus/footsteps-app) .This cross-platform application is being developed for the Android and iOS platforms using the Flutter SDK by Google. 
 
-With Footsteps [app](https://github.com/fnplus/footsteps-app) & [browser extension](https://github.com/fnplus/footsteps-extension), we take a mentor/subject knowledge expert first approach to solve the problem. The domain experts save their learning journey with our app and browser extension & make it available for everyone else to follow. Every resource is called a 'footstep' (added in a chronological manner) and a collection of footsteps makes up a learning path. The learner can "fork" the learning path made by the expert and keep a track of his progress. The app suggests resources & keeps an updated list with users upvotes & collaborative filtering.
+With Footsteps [app](https://github.com/fnplus/footsteps-flutter-app) & [browser extension](https://github.com/fnplus/footsteps-extension), we take a mentor/subject knowledge expert first approach to solve the problem. This flutter app would help individuals to add/manage links in their learning paths. It works just like the browser extension is working right now.
 
 ## 🧐 The Need (as seen on the web)
 
@@ -22,6 +19,9 @@ Here are few examples of why we came up with footsteps:
 [**Reddit thread - "About IBMs Data Science Certification"**](https://www.reddit.com/r/datascience/comments/eleuz9/about_ibms_data_science_certification/)
 
 ## ⏪ Prerequisites
+
+![Pass](https://media.giphy.com/media/Z9cRCMdAMzXi25dwhE/giphy.gif)
+
 
 * Make sure you have Flutter installed (https://flutter.dev/docs/get-started/install)
 * Try installing and experimenting with the development version on your phone
@@ -58,6 +58,71 @@ In the command terminal, run the following commands:
 ## 🏆 Contributing
 Please read [CONTRIBUTING.md](https://github.com/fnplus/footsteps-flutter-app/blob/master/CONTRIBUTING.md) for information on how to contribute to footsteps-extension.
 
+
+## Steps ☘️:
+
+![Steps](https://media.giphy.com/media/o5BzNDDFQnepi/giphy.gif)
+
+
+*  Fork [this](https://github.com/fnplus/footsteps-flutter-app.git) repository :fork_and_knife:
+
+<img src="https://user-images.githubusercontent.com/41269164/70219309-9a3eca80-176a-11ea-8a4d-1bd701d07314.png" width=300>
+
+*  Clone the forked repository :busts_in_silhouette:
+    ```
+    git clone https://github.com/<your_user_name>/footsteps-flutter-app.git
+    ```
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5N0HJ9db7jSvcL4dsDscZQBzqQqqKVs0BnO1OVz26glLWKJRY&usqp=CAU" width="300">
+    
+* Navigate to the project directory.
+    ```
+    cd footsteps-flutter-app/
+    ```
+* Add reference to original repository
+    ```
+    git remote add upstream https://github.com/fnplus/footsteps-flutter-app.git
+    ```
+* See changes using
+    ```
+    git remote -v
+    ```
+* Create a new branch.
+    ```
+    git checkout -b <your_branch_name>
+    ```
+* Always take pull from the upstream repo to your      master branch in order to keep it at par with the main project. 
+    ```
+    git pull upstream master
+    ```
+*  Before creating an issue, discuss it withe project mentors in the [Slack Channel](https://gssoc20.slack.com)
+* Make changes in the source code after getting yourself assigned by the mentors.
+
+    ![changes](https://media.giphy.com/media/QNFhOolVeCzPQ2Mx85/200w_d.gif)
+
+
+* Commit your changes.
+    ```
+    git add .
+    git commit -m "<your_commit_message>"
+    ```
+* Push your local branch to the remote repository.
+    ```
+    git push -u origin <your_branch_name>
+    ```
+* Create a Pull Request!
+
+Finally, go to your repository in browser and click on `compare and pull requests`.
+Then add a title and description to your pull request that explains your precious effort.
+
+<img src="https://user-images.githubusercontent.com/41269164/70219707-47194780-176b-11ea-96c2-d0c401ddb1e0.png" width=600>
+		
+click on `Compare and Pull Request`
+		
+<img src="https://user-images.githubusercontent.com/41269164/70219836-8d6ea680-176b-11ea-81d5-549093bf0954.png" width=600>
+
+**Congratulations!** Sit and relax, you've made your contribution to [Footsteps Flutter App](https://github.com/fnplus/footsteps-flutter-app/) project.
+
+
 ## 👨 Project Admin
 
 - Abhishek Uniyal <p>[<img src="https://img.icons8.com/windows/32/000000/github-2.png" display = "inline-block">](https://github.com/xlogix) [<img src="https://img.icons8.com/ios-glyphs/30/000000/linkedin-2.png" display = "inline-block">](https://www.linkedin.com/in/abhishek-uniyal)</p>
@@ -73,7 +138,7 @@ Please read [CONTRIBUTING.md](https://github.com/fnplus/footsteps-flutter-app/bl
 Feel free to ask your queries!! 🙌
 
 
-## :memo: License
+ ## License ⚙
 
 Licensed under the [GPL v3 License](./LICENSE).
 
