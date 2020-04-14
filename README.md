@@ -27,33 +27,71 @@ Here are few examples of why we came up with footsteps:
 * Try installing and experimenting with the development version on your phone
 * Don't hesitate in asking questions, we'll be happy to help
 
-## Installation
-
-In the command terminal, run the following commands:
+## Installation 
 
     $ git clone https://github.com/fnplus/footsteps-flutter-app.git
     $ cd footsteps-flutter-app/
     $ flutter run
 
-## Simulate for iOS
-#### Method One
-    
-    Open the project in Xcode from ios/Runner.xcodeproj.
-    Hit the play button.
+## Install Dependencies
+Below are the dependencies you will need for most FlutterFire apps, assuming you are using Firestore and Google SignIn.
 
-#### Method Two
+<b>pubspec.yaml</b>
+```
+dependencies:
+  flutter:
+    sdk: flutter
 
-    Run the following command in your terminal.
-    $ open -a Simulator
-    $ flutter run
+  firebase_core: ^0.4.0
+  firebase_analytics: ^1.0.4
 
-## Simulate for Android
+  firebase_auth:  ^0.6.6
+  google_sign_in: ^3.2.4
 
-    Make sure you have an Android emulator installed and running.
-    Run the following command in your terminal.
-    $ flutter run
+```
+
+## Android Setup
+
+1. Make sure you have an Android emulator installed and running.
+2. ### SHA1 Certificate
+   * First, fill [this](https://airtable.com/shrOevwzFNas0wis3) form to request access to the firebase project.
+   * Next, generate an <i>SHA1 certificate</i> to allow Firebase to provision an OAuth2 client and API key when using Google Sign-in and/or dynamic links.
+3. ### Download and save the google-services.json
+   * Download the <b>google-services.json</b> file to the <b>android/app</b> directory. At this point, you can skip all remaining steps in the Firebase console (Flutter does this stuff automatically).
+
+   <img src="https://fireship.io/img/snippets/android-flutter-file-dir.png">
+4. ### Update the build.gradle files
+    * Now we need to register our Google services in the Gradle build files.
+
+    <b>android/build.gradle</b>
+    ```
+
+    buildscript 
+    {
+   dependencies
+    {
+       // ...
+       classpath 'com.google.gms:google-services:3.2.1'   // <-- here
+    }
+    }
+    ```
+
+ 5. That’s it. Try executing flutter run with an Android device emulated or plugged-in to verify the setup worked.
+
+## iOS Setup
+
+ The iOS setup is less tedious and can be completed in one step.
+
+ * ### Register and Download the <b>GoogleService-Info.plist</b>
+ Click <i>add your app to iOS</i> then download the <b>GoogleService-Info.plist</b> file into the ios/Runner/Runner directory from XCode.
 
 
+## Troubleshooting
+At this point, you should be able to serve the app by running <b>flutter run.</b>
+
+* Run <i><b>flutter doctor</b><i> and resolve any detected issues 
+* Open the app in Android Studio or XCode and build it. Inspect the logs.
+* If your app crashes at startup without logs it may be because you changed the id in the <i><b>AndroidManifest.xml</b></i> file.
 
 ## 🏆 Contributing
 Please read [CONTRIBUTING.md](https://github.com/fnplus/footsteps-flutter-app/blob/master/CONTRIBUTING.md) for information on how to contribute to footsteps-extension.
