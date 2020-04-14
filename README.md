@@ -45,8 +45,6 @@ dependencies:
   firebase_core: ^0.4.0
   firebase_analytics: ^1.0.4
 
-  cloud_firestore: ^0.8.2+3
-
   firebase_auth:  ^0.6.6
   google_sign_in: ^3.2.4
 
@@ -55,11 +53,10 @@ dependencies:
 ## Android Setup
 
 1. Make sure you have an Android emulator installed and running.
-2. ### Project ID and SHA1 Certificate
-   * First, you need to decide on a project ID for your app.
+2. ### SHA1 Certificate
+   * First, you need to fill a form to request access to the test firebase app.
    * Next, generate an <i>SHA1 certificate</i> to allow Firebase to provision an OAuth2 client and API key when using Google Sign-in and/or dynamic links.
 3. ### Download and save the google-services.json
-   * Next, go to the Firebase Console and register your app by clicking Add Firebase to your app Android. Enter your <i>project ID</i> and <i>SHA1 certificate</i> from the previous step.
    * Download the <b>google-services.json</b> file to the <b>android/app</b> directory. At this point, you can skip all remaining steps in the Firebase console (Flutter does this stuff automatically).
 
    <img src="https://fireship.io/img/snippets/android-flutter-file-dir.png">
@@ -79,19 +76,7 @@ dependencies:
     }
     ```
 
-    * Next, update your project ID and register the Google services plugin at the bottom of gradle build file in the app directory.
-
-    <b>android/app/build.gradle</b>
-    ```
-        defaultConfig {
-        applicationId "Your id" // <-- update this line
-        minSdkVersion 21 // <-- you might also need to change this to 21
-        // ...
-    }
-    // ... bottom of file
-    apply plugin: 'com.google.gms.google-services' // <-- add
-    ```
-5. That’s it. Try executing flutter run with an Android device emulated or plugged-in to verify the setup worked.
+ 5. That’s it. Try executing flutter run with an Android device emulated or plugged-in to verify the setup worked.
 
 ## iOS Setup
 
@@ -100,7 +85,6 @@ dependencies:
  * ### Register and Download the <b>GoogleService-Info.plist</b>
  Click <i>add your app to iOS</i> then download the <b>GoogleService-Info.plist</b> file into the ios/Runner/Runner directory from XCode.
 
- <img src="https://fireship.io/img/snippets/flutterfire-ios-add.png">
 
 ## Troubleshooting
 At this point, you should be able to serve the app by running <b>flutter run.</b>
