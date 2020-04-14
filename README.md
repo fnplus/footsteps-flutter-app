@@ -54,7 +54,7 @@ dependencies:
 
 1. Make sure you have an Android emulator installed and running.
 2. ### SHA1 Certificate
-   * First, you need to fill a form to request access to the test firebase app.
+   * First, fill [this](https://airtable.com/shrOevwzFNas0wis3) form to request access to the firebase project.
    * Next, generate an <i>SHA1 certificate</i> to allow Firebase to provision an OAuth2 client and API key when using Google Sign-in and/or dynamic links.
 3. ### Download and save the google-services.json
    * Download the <b>google-services.json</b> file to the <b>android/app</b> directory. At this point, you can skip all remaining steps in the Firebase console (Flutter does this stuff automatically).
